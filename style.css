@@ -2,9 +2,34 @@ body {
   margin: 0px;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
 header img {
-  position: relative;
-  left: 23%;
+  width: 40%;
+  max-height: 50px;
+}
+
+.ContLocalisation {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg, #eaeaea 86%, #d5d5d5 97%, #cfcfcf 100%);
+  margin-top: 10px;
+}
+.ContLocalisation i {
+  display: flex;
+  align-self: center;
+  margin-right: 15px;
+  margin-left: -25px;
+}
+.ContLocalisation p {
+  font-weight: bold;
+  font-size: 1, 1 rem;
+}
+
+.ContExplo div h1 {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
