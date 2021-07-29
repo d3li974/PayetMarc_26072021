@@ -71,6 +71,10 @@ header img {
   border-color: transparent;
   margin-top: 30px;
 }
+.ContExplo div button:hover {
+  filter: brightness(1.2);
+  box-shadow: 10px 10px 10px #474646;
+}
 
 section.Fonctionnement {
   padding-bottom: 30px;
@@ -90,6 +94,9 @@ section.Fonctionnement ul li {
   border-radius: 25px;
   margin-left: -18px;
 }
+section.Fonctionnement ul li:hover i {
+  color: #9356dc;
+}
 section.Fonctionnement ul li i {
   display: flex;
   align-self: center;
@@ -98,6 +105,7 @@ section.Fonctionnement ul li i {
 section.Fonctionnement ul li p {
   margin-left: 30px;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 section.Fonctionnement ul li .pChiffre {
   position: absolute;
@@ -113,13 +121,14 @@ section.Fonctionnement ul li .pChiffre {
 section.ContainerRestaurant {
   background-color: #f6f6f6;
   padding-top: 60px;
+  margin-bottom: 50px;
 }
 section.ContainerRestaurant h2 {
   margin-left: 20px;
 }
 section.ContainerRestaurant .BlockRestaurants {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   gap: 25px;
   width: 95%;
   margin-left: 20px;
@@ -149,6 +158,7 @@ section.ContainerRestaurant .BlockRestaurants {
   width: 80px;
   height: 20px;
   background: #99e2d0;
+  color: #2e806b;
   position: relative;
   bottom: 100%;
   left: 70%;
@@ -165,6 +175,8 @@ section.ContainerRestaurant .BlockRestaurants {
 .TextPosition {
   position: relative;
   font-size: 1.2rem;
+  bottom: 3%;
+  left: 3%;
 }
 
 h3 {
@@ -179,20 +191,16 @@ p.Ville {
   position: absolute;
   left: 80%;
   bottom: 15%;
+  height: 50px;
+  z-index: 4;
 }
-.Coeur .empty {
+.Coeur .empty, .Coeur .full {
   position: absolute;
-  bottom: 20%;
-  left: 10%;
+  top: 40%;
   font-size: 30px;
-  z-index: 5;
 }
 .Coeur .full {
   opacity: 0;
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  font-size: 30px;
   z-index: 6;
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -200,8 +208,47 @@ p.Ville {
 }
 .Coeur .full:hover {
   opacity: 1;
-  transform: scale(1.2);
-  transition: all 800ms;
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #353535;
+  padding-top: 25px;
+}
+footer .LogoFooter {
+  filter: invert(100%);
+  margin-left: 20px;
+  height: 20px;
+}
+
+.ContainFooter {
+  display: grid;
+  margin-left: 20px;
+}
+.ContainFooter p, .ContainFooter a {
+  font-size: 1.1rem;
+  color: white;
+}
+.ContainFooter div {
+  display: flex;
+  justify-content: start;
+  color: white;
+}
+.ContainFooter div i {
+  align-self: center;
+  padding-right: 10px;
+}
+.ContainFooter div p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#mail, #CGU {
+  margin-top: -10px;
+}
+
+.Partenaire {
+  margin-top: -30px;
 }
 
 /*# sourceMappingURL=style.css.map */
