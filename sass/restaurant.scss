@@ -1,0 +1,71 @@
+body{
+    margin: 0px;
+}
+$Primaire: #9356dc;
+$Secondaire: #ff79da;
+$Tertiaire: #99e2d0;
+a{
+    text-decoration: none;
+    color: black;
+}
+header {
+   position: relative;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   img{
+       width: 40%;
+       max-height: 30px;
+       position: absolute;
+       left: 30%;
+   }
+   a{
+       position: absolute;
+       left: 5%;
+       top: 100%;
+       i{
+        font-size: 30px;
+        
+       }
+   }
+}
+div.ImgRestaurant{
+    img{
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+section.ContainMenu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    margin-top: -60px;
+    background: white;
+}
+.Coeur{
+    position: absolute;
+    left: 80%;
+    bottom: 15%;
+    height: 50px;
+    z-index: 4;
+    .empty, .full{
+        position: absolute;
+        top: 40%;
+        font-size: 30px;
+    }
+    .full{
+        opacity: 0;
+        z-index: 6;
+        background: -webkit-linear-gradient($Primaire, $Secondaire);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       
+        &:hover{
+            opacity: 1;
+            transform: scale(1.3);
+        }
+    }
+}

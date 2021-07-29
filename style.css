@@ -116,6 +116,7 @@ section.Fonctionnement ul li .pChiffre {
   text-align: center;
   border-radius: 50%;
   color: white;
+  font-weight: normal;
 }
 
 section.ContainerRestaurant {
@@ -204,6 +205,7 @@ p.Ville {
   z-index: 6;
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .Coeur .full:hover {

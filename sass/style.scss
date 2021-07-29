@@ -114,6 +114,7 @@ section.Fonctionnement{
                 text-align: center;
                 border-radius: 50%;
                 color: white;
+                font-weight: normal;
             }
         }
     }
@@ -198,6 +199,7 @@ p.Ville{
          z-index: 6;
          background: -webkit-linear-gradient($Primaire, $Secondaire);
          -webkit-background-clip: text;
+         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
          &:hover{
              opacity: 1;
