@@ -198,13 +198,15 @@ p.Ville{
      .full{
          opacity: 0;
          z-index: 6;
+         transition: all 1s linear;
          background: -webkit-linear-gradient($Primaire, $Secondaire);
          -webkit-background-clip: text;
          -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
          &:hover{
-             opacity: 1;
-             transform: scale(1.3);
+            opacity: 1;
+            height: 100%;
+            transform: scale(1.2);
          }
      }
  }
