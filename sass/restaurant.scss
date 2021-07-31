@@ -62,7 +62,7 @@ section.ContainMenu{
         position: relative;
         text-transform: uppercase;
         font-size: 1.3rem;
-        padding-bottom: 1%;
+        padding-bottom: 1px;
         &::after{
             content: "";
             background: $Tertiaire;
@@ -77,13 +77,14 @@ section.ContainMenu{
         }
         
     }
-    .Entrées{
+    .Entrées, .Plats, .Desserts {
         display: grid;
         gap: 10px;
-        width: 97%;
+        width: 95%;
         .BoiteTextMenu{
             position: relative;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             border-radius: 25px;
             width: 100%;
@@ -93,10 +94,11 @@ section.ContainMenu{
             .TextMenu{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-around;
                 margin-left: 15px; 
                 margin-top: -15px;
                 flex: 1;
+                flex-wrap: wrap;
             }   
         }
     }
@@ -138,10 +140,13 @@ section.ContainMenu{
 }
 
 .Description{
-    white-space: nowrap;
+    flex-direction: row;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     margin-top: 0px;
+    font-size: 0.9rem;
+    
      
 }
 .Prix{
@@ -151,7 +156,7 @@ section.ContainMenu{
 }
 h3{
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis; 
@@ -169,7 +174,7 @@ h1{
 }
 .AnimMenu{
     background-color: #99E2D0;
-    width: 60px;
+    width: 70px;
     margin-right: -70px;
     display: flex;
     align-items: center;
@@ -178,9 +183,9 @@ h1{
     color: white;
     font-size: 1.5em;
     border-radius: 0 10px 10px 0;
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
     i{
-        transition: all 0.4s linear;
+        transition: all 0.5s linear;
     }
 }
 .BoiteTextMenu:hover .AnimMenu{
@@ -189,7 +194,12 @@ h1{
         transform: rotate(720deg);
     }
 }
-
+.BoiteTextMenu:hover .TextMenu{
+    max-width: 205px;
+    .Description{
+        max-width: 205px;
+    }
+}
 
 
 
@@ -222,7 +232,7 @@ footer{
    }
    div{
        display: flex;
-       justify-content: start;
+       justify-content: flex-start;
        color: white;
        i{
            align-self: center;
