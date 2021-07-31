@@ -58,8 +58,8 @@ header img {
 }
 .ContExplo div h2 {
   width: 80%;
-  font-weight: normal;
   font-size: 1.3rem;
+  font-weight: bolder;
 }
 .ContExplo div button {
   height: 50px;
@@ -117,7 +117,6 @@ section.Fonctionnement ul li .pChiffre {
   text-align: center;
   border-radius: 50%;
   color: white;
-  font-weight: normal;
 }
 
 section.ContainerRestaurant {
@@ -204,7 +203,8 @@ p.Ville {
 .Coeur .full {
   opacity: 0;
   z-index: 6;
-  transition: all 1s linear;
+  height: 0%;
+  transition: all 1.5s linear;
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -214,6 +214,10 @@ p.Ville {
   opacity: 1;
   height: 100%;
   transform: scale(1.2);
+}
+
+h2 {
+  font-weight: bold;
 }
 
 footer {
@@ -229,6 +233,7 @@ footer .LogoFooter {
 .ContainFooter {
   display: grid;
   margin-left: 20px;
+  padding-bottom: 30px;
 }
 .ContainFooter p, .ContainFooter a {
   font-size: 1.1rem;

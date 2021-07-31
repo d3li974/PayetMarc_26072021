@@ -58,16 +58,22 @@ section.ContainMenu{
         margin-left: 20px;
     }
     h2{
+        position: relative;
         text-transform: uppercase;
         font-size: 1.3rem;
+        padding-bottom: 1%;
+        &::after{
+            content: "";
+            background: $Tertiaire;
+            filter: brightness(1.1);
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            transform-origin: left;
+        }
         
-    }
-    div.Traitbleu{
-        border-bottom: 3px $Tertiaire solid;
-        filter: brightness(1.1);
-        width: 40px;
-        height: 2px;
-        margin-top: -5%;
     }
     .Entrées{
         display: grid;
@@ -76,17 +82,20 @@ section.ContainMenu{
         .BoiteTextMenu{
             position: relative;
             display: flex;
+            justify-content: space-between;
             border-radius: 25px;
             width: 100%;
             height: 70px;
+            overflow: hidden;
             border: 1PX black solid;
-            
             .TextMenu{
-                display: block;
-                margin-left: 15px;
-                margin-top: -10px;
-            }
-            
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 15px; 
+                margin-top: -15px;
+                flex: 1;
+            }   
         }
     }
 }
@@ -111,7 +120,7 @@ section.ContainMenu{
         opacity: 0;
         z-index: 6;
         height: 0%;
-        transition: all 1s linear;
+        transition: all 1.5s linear;
         background: -webkit-linear-gradient($Primaire, $Secondaire);
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -125,27 +134,27 @@ section.ContainMenu{
         }
     }
 }
+
 .Description{
     white-space: nowrap;
-    overflow: hidden; 
-    text-overflow: ellipsis;  
-    margin-top: -15px;
-    height: 50%;
-    
-    
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0px;
+     
 }
 .Prix{
-    position: absolute;
-    right: 5%;
-    bottom: 0%;
+    display: flex;    
+    margin-top: 20px;
+    padding-right: 25px;
 }
 h3{
     font-weight: bold;
     font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden; 
-    text-overflow: ellipsis;  
+    text-overflow: ellipsis; 
+    margin: 0; 
+    margin-top: 20px;
 }
 h1{
     
@@ -157,19 +166,25 @@ h1{
 
 }
 .AnimMenu{
-    position: absolute;
-    height: 100%;
-    width: 30%;
-    background: $Tertiaire;
-    
-    
-    
+    background-color: #99E2D0;
+    width: 60px;
+    margin-right: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s linear;
     i{
-        position: absolute;
-        bottom: 30%;
-        right: 40%;
-        font-size: 25px;
-        color: white;
+        transition: all 0.4s linear;
+    }
+}
+.BoiteTextMenu:hover .AnimMenu{
+    margin: 0px;
+    i{
+        transform: rotate(720deg);
     }
 }
 
@@ -179,7 +194,13 @@ h1{
 
 
 
+
+
+
+
+
 footer{
+    padding-bottom: 30px;
     margin-top: 40px;
     background-color: #353535;
     padding-top: 25px;

@@ -55,8 +55,9 @@ header {
         }
         h2{
             width: 80%;
-            font-weight: normal;
             font-size: 1.3rem;
+            font-weight: bolder;
+            
         }
         button{
             height: 50px;
@@ -115,7 +116,6 @@ section.Fonctionnement{
                 text-align: center;
                 border-radius: 50%;
                 color: white;
-                font-weight: normal;
             }
         }
     }
@@ -196,32 +196,39 @@ p.Ville{
          font-size: 30px;
      }
      .full{
-         opacity: 0;
-         z-index: 6;
-         transition: all 1s linear;
-         background: -webkit-linear-gradient($Primaire, $Secondaire);
-         -webkit-background-clip: text;
-         -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-         &:hover{
+        opacity: 0;
+        z-index: 6;
+        height: 0%;
+        transition: all 1.5s linear;
+        background: -webkit-linear-gradient($Primaire, $Secondaire);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       
+        &:hover{
             opacity: 1;
             height: 100%;
             transform: scale(1.2);
-         }
-     }
- }
- footer{
-     background-color: #353535;
-     padding-top: 25px;
+            
+        }
+    }
+}
+h2{
+    font-weight: bold;
+}
+footer{
+    background-color: #353535;
+    padding-top: 25px;
      .LogoFooter{
         filter: invert(100%);
          margin-left: 20px;
          height: 20px;
      }
- }
- .ContainFooter{
+}
+.ContainFooter{
     display: grid;
-    margin-left: 20px;    
+    margin-left: 20px;
+    padding-bottom: 30px;    
     p,a{
         font-size: 1.1rem;
         color: white;
