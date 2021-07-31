@@ -191,10 +191,10 @@ h1 {
 }
 
 .BoiteTextMenu:hover .TextMenu {
-  max-width: 205px;
+  max-width: 200px;
 }
 .BoiteTextMenu:hover .TextMenu .Description {
-  max-width: 205px;
+  max-width: 200px;
 }
 
 .Button {
