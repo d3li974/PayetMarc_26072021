@@ -197,6 +197,29 @@ h1 {
   max-width: 205px;
 }
 
+.Button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 10px;
+}
+.Button button {
+  height: 50px;
+  width: 220px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(150deg, #9356dc 1%, #ff79da 90%);
+  border-color: transparent;
+  margin-top: 30px;
+}
+.Button button:hover {
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+  box-shadow: 10px 10px 10px #474646;
+}
+
 footer {
   padding-bottom: 30px;
   margin-top: 40px;
