@@ -163,6 +163,7 @@ section.ContainerRestaurant{
         p.New{
             width: 80px;
             height: 20px;
+            padding: 10px;
             background: $Tertiaire;
             color: #2e806b; 
             position: relative;
@@ -173,7 +174,7 @@ section.ContainerRestaurant{
 }
 .TextPositionNew{
     position: relative;
-    bottom: 25%;
+    bottom: 45%;
     left: 3%;
     font-size: 1.2rem;
     

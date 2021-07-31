@@ -167,6 +167,7 @@ section.ContainerRestaurant .BlockRestaurants {
 .BoiteText p.New {
   width: 80px;
   height: 20px;
+  padding: 10px;
   background: #99e2d0;
   color: #2e806b;
   position: relative;
@@ -177,7 +178,7 @@ section.ContainerRestaurant .BlockRestaurants {
 
 .TextPositionNew {
   position: relative;
-  bottom: 25%;
+  bottom: 45%;
   left: 3%;
   font-size: 1.2rem;
 }
