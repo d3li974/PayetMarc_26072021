@@ -56,6 +56,7 @@ section.ContainMenu{
     
     
     .Menu{
+        display: grid;
         margin-left: 20px;
     }
     h2{
@@ -115,28 +116,26 @@ section.ContainMenu{
         top: 40%;
         font-size: 30px;
         transition: all 1s linear;
-        z-index: 6;
-    }
-    .empty:hover{
-        opacity: 0;
+        z-index: 5;
     }
     .full{
         opacity: 0;
         z-index: 6;
         height: 0%;
-        transition: all 1.5s linear;
-        background: -webkit-linear-gradient($Primaire, $Secondaire);
+        transition: all 2s linear;
+        background: linear-gradient($Primaire, $Secondaire);
         -webkit-background-clip: text;
-        -moz-background-clip: text;
-       -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
        
         &:hover{
             opacity: 1;
             height: 100%;
-            transform: scale(1.2);
-            
         }
     }
+}
+.full:hover .empty{
+    opacity: 0;
 }
 
 .Description{

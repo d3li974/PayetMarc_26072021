@@ -215,16 +215,15 @@ p.Ville {
   opacity: 0;
   z-index: 6;
   height: 0%;
-  transition: all 1.5s linear;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  transition: all 2s linear;
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .Coeur .full:hover {
   opacity: 1;
   height: 100%;
-  transform: scale(1.2);
 }
 
 h2 {

@@ -53,6 +53,7 @@ section.ContainMenu {
   background: #f6f6f6;
 }
 section.ContainMenu .Menu {
+  display: grid;
   margin-left: 20px;
 }
 section.ContainMenu h2 {
@@ -112,25 +113,25 @@ section.ContainMenu .Entrées .BoiteTextMenu .TextMenu, section.ContainMenu .Pla
   top: 40%;
   font-size: 30px;
   transition: all 1s linear;
-  z-index: 6;
-}
-.Coeur .empty:hover {
-  opacity: 0;
+  z-index: 5;
 }
 .Coeur .full {
   opacity: 0;
   z-index: 6;
   height: 0%;
-  transition: all 1.5s linear;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  transition: all 2s linear;
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .Coeur .full:hover {
   opacity: 1;
   height: 100%;
-  transform: scale(1.2);
+}
+
+.full:hover .empty {
+  opacity: 0;
 }
 
 .Description {
