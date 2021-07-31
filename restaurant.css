@@ -87,7 +87,7 @@ section.ContainMenu .Entrées .BoiteTextMenu, section.ContainMenu .Plats .BoiteT
   width: 100%;
   height: 70px;
   overflow: hidden;
-  border: 1PX black solid;
+  /* border: 1PX black solid; */
 }
 section.ContainMenu .Entrées .BoiteTextMenu .TextMenu, section.ContainMenu .Plats .BoiteTextMenu .TextMenu, section.ContainMenu .Desserts .BoiteTextMenu .TextMenu {
   display: flex;
