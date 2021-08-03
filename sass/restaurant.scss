@@ -8,7 +8,9 @@ $Tertiaire: #99e2d0;
 .deco{
     box-shadow: 5px 5px 5px #d1d1d1; ;
 }
-
+.bold{
+    font-weight: bold;
+}
 a{
     text-decoration: none;
     color: black;
@@ -54,9 +56,9 @@ section.ContainMenu{
     margin-top: -50px;
     background: #f6f6f6;
     
-    
     .Menu{
         display: grid;
+        row-gap: 40px;
         margin-left: 20px;
     }
     h2{
@@ -64,6 +66,7 @@ section.ContainMenu{
         text-transform: uppercase;
         font-size: 1.3rem;
         padding-bottom: 1px;
+        margin-left: 15px;
         &::after{
             content: "";
             background: $Tertiaire;
@@ -81,7 +84,7 @@ section.ContainMenu{
     .Entrées, .Plats, .Desserts {
         display: grid;
         gap: 10px;
-        width: 95%;
+        width: 96%;
         .BoiteTextMenu{
             position: relative;
             display: flex;
@@ -107,7 +110,7 @@ section.ContainMenu{
 .Coeur{
     position: absolute;
     left: 80%;
-    top: 3%;
+    top: 1%;
     height: 50px;
     transition: all 1s linear;
     z-index: 4;
@@ -122,7 +125,6 @@ section.ContainMenu{
         opacity: 0;
         z-index: 6;
         height: 0%;
-        transition: all 2s linear;
         background: linear-gradient($Primaire, $Secondaire);
         -webkit-background-clip: text;
         background-clip: text;
@@ -134,8 +136,9 @@ section.ContainMenu{
         }
     }
 }
-.full:hover .empty{
+.Coeur:hover .empty{
     opacity: 0;
+    height: 0%;
 }
 
 .Description{
@@ -167,7 +170,7 @@ h1{
     font-family: 'Shrikhand', cursive;
     font-weight: bold;
     font-size: 1.6rem;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: -70px;
 
 }
@@ -263,25 +266,27 @@ footer{
    margin-top: -30px;
 }
 #Entrées{
+    opacity: 0;
     transition: all;
-    -webkit-animation: Slidetop .4s  ease-in;
-            animation: Slidetop .3s  ease-in;
+    -webkit-animation: Slidetop .5s  ease-in forwards;
+            animation: Slidetop .5s  ease-in forwards;
 }
 #Plats{
     transform-origin: bottom;
-    opacity: 1;
+    opacity: 0;
     transition: all .4s;
-    -webkit-animation: Slidetop .4s .5s ease-in;
-            animation: Slidetop .4s .5s ease-in;
+    -webkit-animation: Slidetop .5s .5s ease-in forwards;
+            animation: Slidetop .5s .5s ease-in forwards;
 }
 #Desserts{
+    opacity: 0;
     transition: all;
-    -webkit-animation: Slidetop .4s 1s ease-in;
-            animation: Slidetop .4s 1s ease-in;
+    -webkit-animation: Slidetop .5s 1s ease-in forwards;
+            animation: Slidetop .5s 1s ease-in forwards;
 }
 @-webkit-keyframes Slidetop {
     0%{
-        transform: translateY(-2000%);
+        transform: translateX(2000px);
         opacity: 0;
     }
     50%{
@@ -289,14 +294,19 @@ footer{
     }
     100%{
         transform: translateY(0%);
+        opacity: 1;
     }
 }
 @keyframes Slidetop {
     0% {
         transform: translateY(200px);
-        opacity: 1;
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }

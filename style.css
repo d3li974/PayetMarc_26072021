@@ -12,6 +12,88 @@ p {
   font-size: 20px;
 }
 
+.loader {
+  opacity: 0;
+  background: #9356dc;
+  -webkit-filter: blur(100%);
+  filter: blur(100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: loader 5s linear forwards;
+  animation: loader 5s linear forwards;
+  z-index: 10;
+}
+.loader img {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  -webkit-animation: loaderimg 5s linear forwards;
+  animation: loaderimg 5s linear forwards;
+}
+
+@-webkit-keyframes loaderimg {
+  0% {
+    background: #99e2d0;
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 1;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loaderimg {
+  0% {
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 2;
+  }
+  50% {
+    opacity: 1.5;
+    background: #ff79da;
+  }
+  99% {
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    height: 0px;
+    width: 0px;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 2;
+  }
+  50% {
+    opacity: 1.5;
+    background: #ff79da;
+  }
+  99% {
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    height: 0px;
+    width: 0px;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -210,12 +292,12 @@ p.Ville {
   position: absolute;
   top: 40%;
   font-size: 30px;
+  transition: all 1s linear;
 }
 .Coeur .full {
   opacity: 0;
   z-index: 6;
   height: 0%;
-  transition: all 2s linear;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   background-clip: text;
@@ -224,6 +306,11 @@ p.Ville {
 .Coeur .full:hover {
   opacity: 1;
   height: 100%;
+}
+
+.Coeur:hover .empty {
+  opacity: 0;
+  height: 0%;
 }
 
 h2 {
