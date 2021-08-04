@@ -20,16 +20,16 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-animation: loader 5s linear forwards;
-  animation: loader 5s linear forwards;
+  -webkit-animation: loader 3s linear forwards;
+  animation: loader 3s linear forwards;
   z-index: 10;
 }
 .loader img {
   position: absolute;
   top: 50%;
   right: 30%;
-  -webkit-animation: loaderimg 5s linear forwards;
-  animation: loaderimg 5s linear forwards;
+  -webkit-animation: loaderimg 3s linear forwards;
+  animation: loaderimg 3s linear forwards;
 }
 
 @-webkit-keyframes loaderimg {
@@ -45,9 +45,6 @@ p {
   }
 }
 @keyframes loaderimg {
-  0% {
-    transform-origin: top;
-  }
   100% {
     transform: rotate(720deg);
     opacity: 0;
