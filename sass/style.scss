@@ -28,8 +28,7 @@ p{
     img{
         position: absolute;
         top: 50%;
-        right: 40%;
-        height: 90px;
+        height: 70px;
         -webkit-animation: loaderimg 3s linear forwards ;
                 animation: loaderimg 3s linear forwards;
                 
@@ -44,7 +43,7 @@ p{
         transform: rotate(360deg);
     }
     100%{
-        transform: rotate(360deg);
+        
         opacity: 1;
         opacity: 0;
         z-index: -1;
