@@ -28,7 +28,8 @@ p{
     img{
         position: absolute;
         top: 50%;
-        right: 30%;
+        right: 40%;
+        height: 90px;
         -webkit-animation: loaderimg 3s linear forwards ;
                 animation: loaderimg 3s linear forwards;
                 
@@ -36,21 +37,28 @@ p{
 }
 @-webkit-keyframes loaderimg{
     0%{
-        background: $Tertiaire;
+        
         transform-origin: top;
     }
-   
+    90%{
+        transform: rotate(360deg);
+    }
     100%{
-        transform: rotate(720deg);
+        transform: rotate(360deg);
         opacity: 1;
         opacity: 0;
         z-index: -1;
     }
 }
 @keyframes loaderimg{
-    
+    0%{
+        transform-origin: top;
+    }
+    90%{
+        transform: rotate(360deg);
+    }
     100%{
-        transform: rotate(720deg);
+        
         opacity: 0;
         z-index: -1;
        
