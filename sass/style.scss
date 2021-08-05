@@ -15,8 +15,6 @@ p{
 .loader{
     opacity: 0;
     background: $Primaire;
-    -webkit-filter: blur(100%);
-            filter: blur(100%);
     position: absolute;
     width: 100%;
     height: 100%;
